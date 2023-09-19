@@ -1,0 +1,81 @@
+### CREATE five documents.
+POST http://localhost:3000/travels HTTP/1.1
+content-type: application/json
+
+{
+    "destination": "Paris France",
+    "days": 7,
+    "date": "2021-09-13"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Eternal Sunshine Of The Spotless Mind",
+    "year": 2004,
+    "language": "Arabic"
+}
+
+### CREATE 3
+POST http://localhost:3000/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "High Fidelity",
+    "year": 2000,
+    "language": "French"
+}
+
+### CREATE 4
+POST http://localhost:3000/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Anchorman",
+    "year": 2004,
+    "language": "Korean"
+}
+
+### CREATE 5
+POST http://localhost:3000/movies HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Parasite",
+    "year": 2019,
+    "language": "Korean"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/travels HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/travels/6484e4c675f32f179dc42033 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the id in the following request with one that exists
+### and update the title, year, and/or language:
+PUT http://localhost:3000/travels/6484e4c675f32f179dc42033 HTTP/1.1
+content-type: application/json
+
+{
+    "destination": "Santorini Greek",
+    "days": 9,
+    "date": "2021-09-01"
+}
+
+### DELETE by ID (no response provided)
+DELETE http://localhost:3000/travels/6484dae139cb52462c472db3 HTTP/1.1
+
+
+### DELETEs ALL documents!
+DELETE http://localhost:3000/movies/ HTTP/1.1
+
